@@ -1,0 +1,24 @@
+html
+	head
+	body
+		div(id='testForm')
+			input(type='hidden' id='echoSignSH' name='ECHOSIGN_SH' value='2a2dfae679b3ce470b7300b483c915f44ed0d55b4b9b8766')
+			input(type='text' id='emailField' name='email' size='20' placeholder='Email')
+			br
+			textarea(rows='4' cols='30' id='messageField' name='message')
+			br
+			input type='hidden' id='pid' name='pid' value='CBJCHBCAABAA8zZ63VKKUEN8uvhgnuKIwruq_AXvx6zm'
+
+		script(src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous')
+
+		script.
+			$.ajax({
+				method: 'POST',
+				url: 'https://pepperdine.na1.echosign.com/public/replaceSigner',
+				data: { 
+					ECHOSIGN_SH : $('#echoSignSH').val(),
+					email: $('#emailField').val(),
+					message: $('#messageField').val(),
+					pid: $('#pid').val()
+				}
+			});

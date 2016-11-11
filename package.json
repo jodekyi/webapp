@@ -1,0 +1,13 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "learning how to make a webapp",
+  "author": "Joshua Owusu-Dekyi",
+  "main": "index.js",
+  "scripts": {
+  	"start" : "node index.js"
+  },
+  "dependencies" : {
+  	"express": "*"
+  }
+}
