@@ -1,28 +1,31 @@
 extends layout.pug
 
 block title
-	title Log In
+	title Login
 
 block content
 	div(class='container verticalCenterContainer')
-		h1(class='centerText') Brand
-		div(class='form-group')
+		h1(class='centerText') Brand  
+			i(class='fa fa-bug')
+		div(class='centerText form-group') God knows what this site will even turn into
+		form
+			div(class='form-group')
+				div(class='row')
+					div(class='col-md-6 col-sm-8 centerElement')
+						div(class='input-group')
+							span(class='input-group-addon')
+								i(class='fa fa-user')
+							input(type='text' class='form-control' id='username' name='username' placeholder='Username')
+			div(class='form-group')
+				div(class='row')
+					div(class='col-md-6 col-sm-8 centerElement')
+						div(class='input-group')
+							span(class='input-group-addon')
+								i(class='fa fa-key')
+							input(type='password' class='form-control' id='password' name='password' placeholder='Password')
 			div(class='row')
 				div(class='col-md-6 col-sm-8 centerElement')
-					div(class='input-group')
-						span(class='input-group-addon')
-							i(class='fa fa-user')
-						input(type='text' class='form-control' id='username' name='username' placeholder='Username')
-		div(class='form-group')
-			div(class='row')
-				div(class='col-md-6 col-sm-8 centerElement')
-					div(class='input-group')
-						span(class='input-group-addon')
-							i(class='fa fa-key')
-						input(type='password' class='form-control' id='password' name='password' placeholder='Password')
-		div(class='row')
-			div(class='col-md-6 col-sm-8 centerElement')
-				button(class='btn btn-default btn-block')
-					i(class='fa fa-sign-in')  Login
+					button(class='btn btn-default btn-block')
+						i(class='fa fa-sign-in')  Login
 
 			

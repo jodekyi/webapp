@@ -1,9 +1,11 @@
 'use strict';
 const express = require('express');
+const mongoose = require('mongoose');
 const path = require('path');
 const PORT = 8080;
 
 const app = express();
+//mongoose.connect('mongodb://localhost/website-database')
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'bower_components')));
 app.get('/', function(req, res) {
