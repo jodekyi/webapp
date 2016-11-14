@@ -2,7 +2,7 @@ doctype html
 html(style='width=100%')
 	head
 		meta(name='viewport' content='width=device-width initial-scale=1.0')
-		title Home
+		block title
 		link(rel='stylesheet' type='text/css' href='../bootstrap/dist/css/bootstrap.min.css')
 		link(rel='stylesheet' type='text/css' href='../font-awesome/css/font-awesome.min.css')
 		link(rel='stylesheet' type='text/css' href='../my_css/site.css')
@@ -39,3 +39,4 @@ html(style='width=100%')
 						li
 							a(class='centerText' href='Register')
 								i(class='fa fa-user-plus')  Register
+	block content
