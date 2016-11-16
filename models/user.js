@@ -3,9 +3,11 @@ const Schema = mongoose.Schema;
 
 var userSchema = new Schema({
 	username: { type: String, required: true, unique: true },
-	password: { type: String, required: true },
-	created_at: Date,
-	updated_at: Date
+	email: { type: String, required: true, unique: true },
+	key: { type: String, required: true },
+	salt: { type: String, required: true },
+	created_at: { type: Date, required: true },
+	updated_at: { type: Date, required: true }
 });
 
 var User = mongoose.model('User', userSchema);
