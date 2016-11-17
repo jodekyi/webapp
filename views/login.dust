@@ -1,0 +1,47 @@
+{>"layout"/}
+{<site_title}
+Login
+{/site_title}
+
+{<body_content}
+	<div class='container verticalCenterContainer'>
+		<h1 class='centerText'> Brand  
+			<i class='fa fa-bug'></i>
+		</h1>
+		<div class='centerText form-group'>
+			God knows what this site will even turn into
+		</div>
+		<form method='post' action='/Login'>
+			<div class='form-group'>
+				<div class='row'>
+					<div class='col-md-6 col-sm-8 centerElement'>
+						<div class='input-group'>
+							<span class='input-group-addon'>
+								<i class='fa fa-user'></i>
+							</span>
+							<input type='text' class='form-control' id='username' name='username' placeholder='Username'/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='form-group'>
+				<div class='row'>
+					<div class='col-md-6 col-sm-8 centerElement'>
+						<div class='input-group'>
+							<span class='input-group-addon'>
+								<i class='fa fa-key'></i>
+							</span>
+							<input type='password' class='form-control' id='password' name='password' placeholder='Password'/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='col-md-6 col-sm-8 centerElement'>
+					<button class='btn btn-default btn-block'>
+						<i class='fa fa-sign-in'>  Login</i>
+					</button>
+				</div>
+			</div>
+		</form>
+{/body_content}

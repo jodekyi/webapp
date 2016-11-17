@@ -10,6 +10,8 @@
   "dependencies" : {
   	"express": "*",
     "mongoose": "*",
-    "body-parser": "*"
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "uuid": "*"
   }
 }

@@ -19,8 +19,7 @@ var Encrypt = {
 	compare_passwords : function(unencrypted_password, encrypted_password, salt, callback) {
 		Encrypt.encrypt_password(unencrypted_password, salt, function(err, data) {
 								if(err) callback(err, null);
-								else 
-									{
+								else {
 										callback(null, { equal : (data.key == encrypted_password) });
 									}
 							});

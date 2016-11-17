@@ -1,0 +1,8 @@
+{>"layout"/}
+{<site_title}
+Brand
+{/site_title}
+
+{<body_content}
+		<div>Temp</div>
+{/body_content}

@@ -1,8 +1,11 @@
+//library dependencies
 const express = require('express');
-const router = express.Router();
 const mongoose = require('mongoose');
 const encrypt = require('../helpers/encrypt');
 const User = require('../models/user');
+const router = express.Router();
+
+//mongoose model dependencies
 mongoose.model('User');
 
 router.get('/', function(req, res) {
