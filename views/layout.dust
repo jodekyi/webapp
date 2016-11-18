@@ -48,6 +48,7 @@
 							</a>
 						</li>
 					</ul>
+					{^user}
 					<ul class='nav navbar-nav navbar-right'>
 						<li>
 							<a class='centerText' href='Login'>
@@ -60,6 +61,16 @@
 							</a>
 						</li>
 					</ul>
+					{/user}
+					{?user}
+					<ul class='nav navbar-nav navbar-right'>
+						<li>
+							<a class='centerText' href='Settings'>
+								<i class='fa fa-user'>  {user.username}</i>
+							</a>
+						</li>
+					</ul>
+					{/user}
 				</div>
 			</div>
 		</nav>

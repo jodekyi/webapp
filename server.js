@@ -13,13 +13,15 @@ const PORT = 8080;
 
 //express components
 const app = express();
+
+//cookies/session store
+app.use(cookie_parser('who knows if i will actually need this'));
+
+//set up router
 const router = express.Router();
 
 //database setup
 mongoose.connect('mongodb://localhost/webapp_db');
-
-//cookies/session store
-app.use(cookie_parser('who knows if i will actually need this'));
 
 //viewengine setup
 const options = {
