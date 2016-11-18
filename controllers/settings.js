@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/', function(req, res) {
 	login_helper.login_from_cookie(req, res, function(err, data){
-		res.render('index', { title: 'Login', user: data.user });
+		res.render('settings', { title: 'Settings', user: data.user });
 	});
 });
 

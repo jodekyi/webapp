@@ -1,8 +1,8 @@
 {>"layout"/}
 {<site_title}
-Brand
+Settings
 {/site_title}
 
 {<body_content}
-		<div>Home</div>
+		<div>Settings</div>
 {/body_content}

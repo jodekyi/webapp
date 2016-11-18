@@ -11,7 +11,9 @@ mongoose.model('Session');
 const cookie_lifetime = 1000 * 60 * 60 * 24 * 30; // 30 days
 
 var Login = {
-	login_from_page : function(username, password, callback) {
+	login_from_page : function(req, res, callback) {
+		const username = req.body.username;
+		const password = req.body.password;
 		User.findOne({ username : username }, function(err, user) {
 			if(err) callback(err, null);
 			else if(user === undefined || user == null)
@@ -34,21 +36,23 @@ var Login = {
 						res.cookie('session_key', session_key, { maxAge: cookie_lifetime });
 						callback(null, { success: true });
 					}
-					else return { success: false };
+					else callback(null, { success: false });
 				});
 			}
 		});
 	},
 
-	login_from_cookie : function(user_id, session_key, callback) {
-		Session.findOne({ user_id: user_id, session_key: session_key }, function(err, session){
+	login_from_cookie : function(req, res, callback) {
+		const user_id = req.cookies.user_id;
+		const session_key = req.cookies.session_key;
+		Session.findOne({ user_id: user_id, key: session_key }, function(err, session){
 		if(err) callback(err, null);
 
 		User.findById(user_id, function(err, user) {
 			if(err) callback(err, null);
 			else callback(null, {user: user });
 		});
-	});
+		});
 	}
 }
 

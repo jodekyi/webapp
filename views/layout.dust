@@ -69,6 +69,11 @@
 								<i class='fa fa-user'>  {user.username}</i>
 							</a>
 						</li>
+						<li>
+							<a class='centerText' href='Logout'>
+								<i class='fa fa-sign-out'>  Logout</i>
+							</a>
+						</li>
 					</ul>
 					{/user}
 				</div>

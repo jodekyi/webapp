@@ -21,7 +21,10 @@ app.use(cookie_parser('who knows if i will actually need this'));
 const router = express.Router();
 
 //database setup
-mongoose.connect('mongodb://localhost/webapp_db');
+mongoose.connect('mongodb://localhost/webapp_db', function(err) {
+	if(err) console.log(err);
+	else console.log('connected');
+});
 
 //viewengine setup
 const options = {
@@ -39,8 +42,18 @@ app.use(express.static(path.join(__dirname, './bower_components')));
 app.use('/', require('./controllers/index'));
 app.use('/tags', require('./controllers/tags'));
 app.use('/login', require('./controllers/login'));
+app.use('/logout', require('./controllers/logout'));
 app.use('/register', require('./controllers/register'));
+app.use('/settings', require('./controllers/settings'));
 
 //port listening
 app.listen(PORT);
 console.log('Running on http://localhost: ' + PORT);
+
+//cleanup
+process.on('SIGINT', function() {  
+  mongoose.connection.close(function () { 
+    console.log('mongoose connection closed'); 
+    process.exit(0); 
+  }); 
+});
